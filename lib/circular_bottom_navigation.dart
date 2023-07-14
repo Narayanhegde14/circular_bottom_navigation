@@ -247,9 +247,6 @@ class _CircularBottomNavigationState extends State<CircularBottomNavigation>
       Color iconColor = pos == selectedPos
           ? widget.selectedIconColor
           : widget.normalIconColor;
-      Color unreadIconColor = pos == selectedPos
-          ? widget.normalIconColor
-          : widget.selectedIconColor;
       double scaleFactor = pos == selectedPos ? 1.2 : 1.0;
       children.add(
         Positioned(
@@ -266,7 +263,7 @@ class _CircularBottomNavigationState extends State<CircularBottomNavigation>
                   Icon(
                     Icons.circle,
                     size: widget.iconsSize / 2,
-                    color: Theme.of(context).colorScheme.secondary,
+                    color: widget.tabItems[pos].unreadIconColor,
                   )
               ],
             ),
