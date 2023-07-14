@@ -266,7 +266,7 @@ class _CircularBottomNavigationState extends State<CircularBottomNavigation>
                   Icon(
                     Icons.circle,
                     size: widget.iconsSize / 2,
-                    color: Theme.of(context).colorScheme.primary,
+                    color: Theme.of(context).colorScheme.secondary,
                   )
               ],
             ),
